@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--Тричук Маркіяна-->
+<html lang="UK-ua">
+	<head>
+		<meta charset="UTF-8">
+		<title>Психологічні дослідження</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="author" content="Markiyan Trychuk"/>
+		<meta name="description" content="Психологічні дослідження і тести"/>
+		<meta name="keywords" content="психологія тести темперамент конфліктність самооцінка визначити" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+	</head>
+	<body class="wrapper style3 special" >
+				<div class="container">
+					<header class="major">
+						<h2>Реєстрація</h2>
+					</header>
+				</div>
+				<div class="container 50%">
+					<form action="#" method="post">
+						<div class="row uniform">
+							<div class="12u$">
+								<input name="name" id="name" value="" placeholder="Ім'я" type="text">
+							</div>
+							<div class="12u$">
+								<input name="email" id="email" value="" placeholder="Email" type="email">
+							</div>
+							<div class="12u$">
+								<input name="password" id="password" value="" placeholder="Password" type="password">
+							</div>
+							<div class="12u$">
+								<input name="password" id="password_confirm" value="" placeholder="Confirm password" type="password">
+							</div>
+							<div class="12u$">
+									<input value="Зареєструватись" class="special big" style="left-margin:35%" type="submit" onclick="Register()">
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="container">
+					<header class="major">
+						<h2 id="confirmMessage"></h2>
+					</header>
+				</div>
+<script lang="JavaScript">
+var isValid = true;
+
+    function checkPass()
+{
+    var pass1 = document.getElementById('password');
+    var pass2 = document.getElementById('password_confirm');
+    var message = document.getElementById('confirmMessage');
+    var goodColor = "#66cc66";
+    var badColor = "#ff6666";
+    if(pass1.value == pass2.value){
+        isValid = true;
+        pass2.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = "Паролі коректні"
+    }else{
+        isValid = false;        
+        pass2.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = "Паролі не коректні!"
+    }
+}  
+
+function Register(){
+window.location.href = "Main.html";
+}
+    </script>
+	</body>
+</html>
